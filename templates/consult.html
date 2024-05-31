@@ -57,39 +57,19 @@
 <body>
     <div class="container">
         <h1>Buscar Información</h1>
-        <form id="searchForm">
+        <form method="POST" action="/consult">
             <label for="id">Por favor ingrese el ID:</label>
             <input type="text" id="id" name="id" required>
-            <button type="submit">Buscar</button>
+            <button " type="submit">Buscar</button>
+            <p></p>
         </form>
+        <button onclick="regresar()" type="submit">cancelar</button>
         <div id="result" class="result"></div>
     </div>
-
     <script>
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const id = document.getElementById('id').value;
-            fetch('/search', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ id })
-            })
-            .then(response => response.json())
-            .then(data => {
-                const resultDiv = document.getElementById('result');
-                if (data.error) {
-                    resultDiv.innerHTML = `<p style="color: red;">${data.error}</p>`;
-                } else {
-                    resultDiv.innerHTML = `<p>Resultado: ${JSON.stringify(data)}</p>`;
-                }
-            })
-            .catch(error => {
-                document.getElementById('result').innerHTML = `<p style="color: red;">Error al buscar los datos</p>`;
-                console.error('Error:', error);
-            });
-        });
+        function regresar() {
+            window.location.href = "/";
+        }
     </script>
 </body>
 </html>

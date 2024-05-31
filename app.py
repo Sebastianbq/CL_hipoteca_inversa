@@ -18,6 +18,6 @@ app.register_blueprint( user_view.blueprint )
 
 # Esta linea permite que nuestra aplicación se ejecute individualmente
 if __name__=='__main__':
-   app.run( debug=True )
+   (app.run( debug=True ))
 
 
