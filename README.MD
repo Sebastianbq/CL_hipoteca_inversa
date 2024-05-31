@@ -6,6 +6,9 @@
 - Alejandro Gutierrez Vallejo
 - Andrea Márquez Sánchez
 
+WEB
+- Sebastian Buitrago Quintero
+
 ## ¿Qué es y para qué es?
 
 Este proyecto tiene como objetivo calcular una Hipoteca Inversa.
@@ -23,6 +26,13 @@ Instale el paquete psycopg2 con:
 `
 pip install psycopg2
 `
+
+Instale el paquete flash con:
+`
+pip install flash
+`
+
+utilice el comando hipoteca_inversa\app.py para ejecutar la pagina web
 
 ## Estructura sugerida
 
